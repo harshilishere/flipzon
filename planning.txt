@@ -1,0 +1,10 @@
+sales post req
+{
+  "order_no":100421_01,
+  "customer_details":{"customer_name":"rahul","customer_add":"blahblah",},
+  "distance_of_delivery":1,
+  "items_qty":{"item_category":"tv","item_qty":2}
+}
+
+make api to check and insert new inventory. DONE
+make api to place order. DONE will check available inventory only then place order
