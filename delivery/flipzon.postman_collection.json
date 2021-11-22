@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "9c495086-107d-479b-b792-c7ffa6b72477",
+		"name": "flipzon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generate_token",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "letmein",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/token/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_sale",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token b5dad167940ae3da6eddc1509d957bf1d8b5e74f",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_no",
+							"value": "15453",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "customer_name",
+							"value": "vijay",
+							"type": "text"
+						},
+						{
+							"key": "customer_add",
+							"value": "dufhdfnvi",
+							"type": "text"
+						},
+						{
+							"key": "dod",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "items_category",
+							"value": "television",
+							"type": "text"
+						},
+						{
+							"key": "Items_qty",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "item_model",
+							"value": "xyz123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/sale/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"sale",
+						""
+					],
+					"query": [
+						{
+							"key": "order_no",
+							"value": "15144",
+							"disabled": true
+						},
+						{
+							"key": "customer_name",
+							"value": "rahul",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_inventory",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token c15368e6056a0b2fa254feafdfcc2a5ea8ad03c0",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/inventory/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"inventory",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/assign/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"assign",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
