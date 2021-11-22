@@ -15,14 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from .views import TestView, Assign
+from .views import  Assign
 from sales.views import SaleView, InventorySale
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/',include('rest_framework.urls')),
-    path('',TestView.as_view(),name='test'),
     path('assign/',Assign.as_view(),name='assign'),
     path('sale/',SaleView.as_view(),name='salehome'),
     path('inventory/',InventorySale.as_view(),name='inventory'),
